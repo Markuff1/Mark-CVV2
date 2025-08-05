@@ -1,0 +1,249 @@
+// Color Variables
+$primary-color: rgb(0, 170, 255);
+$secondary-color: rgb(187, 0, 255);
+$tertiary-color: rgb(0, 34, 255);
+
+$primary-color-dark: rgb(0, 100, 150);
+$secondary-color-dark: rgb(109, 0, 148);
+$primary-color-light: rgb(151, 220, 255);
+$secondary-color-light: rgb(228, 152, 255);
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: $secondary-color #1e293b;
+}
+
+
+.modal-content {
+  background-color: #0f172a;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  height: 90%;
+  overflow-y: scroll;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.2);
+  position: relative;
+  animation: fadeInUp 0.5s ease;
+
+
+  
+  // Custom Scrollbar Styling
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
+    border-radius: 8px;
+    border: 2px solid #1e293b;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #0ea5e9;
+  }
+
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid $primary-color;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.subtitle{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+    font-size: 1.5rem;
+}
+
+.experience-item {
+  background: #1e293b;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.1);
+
+  h3 {
+    font-size: 1.25rem;
+    color: $primary-color;
+    margin-bottom: 0.2rem;
+  }
+
+  .date {
+    display: block;
+    border-top: 2px solid $primary-color;
+    font-size: 0.95rem;
+    font-weight: 900;
+    color: $secondary-color;
+    margin-bottom: 0.8rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+
+    li {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+    .skill-badge {
+      background-color: $tertiary-color;
+      color: white;
+      padding: 0.4rem 0.7rem;
+      border-radius: 0.5vh;
+      box-shadow: 0 0 1vh rgb(0, 0, 0);
+      transition: background 0.5s ease, transform 0.5s ease;
+      font-size: 0.8rem;
+      font-weight: 700;
+
+      &:hover {
+        background-color: $secondary-color;
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.logo-grid {
+  background: #1e293b;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 2rem 2rem;
+
+  .logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    filter: brightness(0) invert(1);
+
+    img {
+      width: 4.5rem;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    span {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: $primary-color-light;
+      text-align: center;
+    }
+  }
+}
+
+.qualifications {
+  margin: 2rem 0;
+  text-align: center;
+
+  .qualification-item {
+    background: #1e293b;
+    border-left: 6px solid $primary-color;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem auto;
+    max-width: 700px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.3),
+                  inset 0 0 10px rgba(187, 0, 255, 0.3);
+    }
+
+    .qualification-name {
+      color: $primary-color;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .qualification-date {
+      font-size: 0.95rem;
+      color: $secondary-color-light;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .qualification-grade {
+      font-size: 1.1rem;
+      color: $secondary-color;
+      font-weight: 600;
+    }
+  }
+}
+
