@@ -31,7 +31,7 @@ const projectList = [
     ],
     tech: ["React", "TypeScript", "Firebase", "PHP", "SCSS", "JavaScript", "Chart.js", "Leaflet", "Blob API", "VSCode"],
     image: MyRunnerV1,
-    link: "/projects/MyRunner",
+    link: "",
     repo: "https://github.com/Markuff1/MyRunner",
   },
   {
@@ -49,7 +49,7 @@ const projectList = [
     ],
     tech: ["React", "TypeScript", "Firebase", "PHP", "SCSS", "JavaScript", "VSCode"],
     image: WWEWrestleverseV3Image,
-    link: "/projects/WWEWrestleverseV3",
+    link: "",
     repo: "https://github.com/Markuff1/Wrestleverse2k25",
     site: "https://wweuniverse.app",
   },
@@ -65,7 +65,7 @@ const projectList = [
     ],
     tech: ["HTML", "CSS", "JavaScript", "PHP", "Google Docs", "GitHub Pages"],
     image: WWEWrestleverseV2Image,
-    link: "/projects/WWEWrestleverseV2",
+    link: "",
     repo: "https://github.com/Markuff1/WrestleVerse",
     site: "https://thewrestleverse.co.uk/",
   },
@@ -82,7 +82,7 @@ const projectList = [
     ],
     tech: ["Java", "OOP", "Eclipse IDE"],
     image: JavaGame,
-    link: "/projects/2d-adventure-game",
+    link: "",
     repo: "",
     site: "",
   },
@@ -97,14 +97,14 @@ const projectList = [
     ],
     tech: ["React", "TypeScript", "FormSpree", "SCSS"],
     image: HarryBDayPage,
-    link: "/projects/birthday-quiz",
+    link: "",
     repo: "",
     site: "",
   },
   {
-    title: "CV Portfolio Website",
+    title: "CV Portfolio Website V1",
     description:
-      "A professional, mobile-friendly portfolio site to showcase my work, skills, and resume. Built from scratch using React, SCSS, and Vite for blazing fast development and deployment.",
+      "This is the first version of a professional, mobile-friendly portfolio site to showcase my work, skills, and resume. Built from scratch using React, SCSS, and Vite for blazing fast development and deployment.",
     bullets: [
       "Created modular project and experience cards to dynamically populate portfolio data",
       "Implemented file download button to access CV PDF with click-to-download UX",
@@ -129,7 +129,7 @@ const projectList = [
     ],
     tech: ["Python", "OpenCV", "Tkinter", "File Handling"],
     image: ImageResizer,
-    link: "/projects/image-resizer",
+    link: "",
     repo: "https://github.com/Markuff1/Image-Resizer",
     site: "",
   },
@@ -146,7 +146,7 @@ const projectList = [
     ],
     tech: ["React", "TypeScript", "JavaScript", "Chess.js", "React Chessboard"],
     image: ChessGame,
-    link: "/projects/chess-app",
+    link: "",
     repo: "https://github.com/Markuff1/chess-game",
     site: ""
   }
@@ -199,8 +199,16 @@ const Projects: React.FC<ProjectsProps> = ({ onClose }) => {
                   ))}
                 </div>
                 <div className="project-links">
-                  {project.link && <a href={project.link} className="btn" target="_blank">View</a>}
-                  {project.repo && <a href={project.repo} className="btn" target="_blank">Code</a>}
+                  {project.site && (
+                    <a href={project.site} className="btn" target="_blank" rel="noopener noreferrer">
+                      View
+                    </a>
+                  )}
+                  {project.repo && (
+                    <a href={project.repo} className="btn" target="_blank" rel="noopener noreferrer">
+                      Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

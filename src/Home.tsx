@@ -88,7 +88,7 @@ const Home = () => {
                     <a href="https://www.linkedin.com/in/mark-nixon-325b84239/" target="_blank" rel="noopener noreferrer">
                       <img src={LinkedInIcon} alt="LinkedIn" />
                     </a>
-                    <a href="/mark-cv/MarksCV.pdf" download className="CVButton">
+                    <a href="/MarksCV.pdf" download className="CVButton">
                       <Download size={18} style={{ marginRight: '0.5rem' }} />
                       Download CV
                     </a>
