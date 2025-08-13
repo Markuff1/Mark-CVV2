@@ -54,7 +54,7 @@ const Home = () => {
           <div className="content-overlay">
             <div className="profile-wrapper">
               <div className="headshot">
-                <img src={Headshot} alt="Headshot" />
+                <img src={Headshot} alt="Headshot"  loading="lazy" />
               </div>
               <div className="info">
                 <h1>
